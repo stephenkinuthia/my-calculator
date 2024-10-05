@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="styles/calc.css"/>
+<script src="javascript/calcscript.js"></script>
+  </head>
+  <body>
+    <div class="calc-values">
+   <input type="text" id="result" disabled/>
+   <button class="red" onclick="clearResult()">Ac</button>
+   <button class="red" onclick="clearResult()">C</button>
+   <button class="orange" onclick="getResult('%')">%</button>
+   <button class="orange" onclick="getResult('/')">/</button>
+   <button onclick="getResult('7')">7</button>
+   <button onclick="getResult('8')">8</button>
+   <button onclick="getResult('9')">9</button>
+   <button class="orange" onclick="getResult('*')">*</button>
+   <button onclick="getResult('4')">4</button>
+   <button onclick="getResult('5')">5</button>
+   <button onclick="getResult('6')">6</button>
+   <button class="orange" onclick="getResult('-')">-</button>
+   <button onclick="getResult('1')">1</button>
+   <button onclick="getResult('2')">2</button>
+   <button onclick="getResult('3')">3</button>
+   <button class="orange" onclick="getResult('+')">+</button>
+   <button onclick="getResult('00')">00</button>
+   <button onclick="getResult('0')">0</button>
+   <button onclick="getResult('.')">.</button>
+   <button class="orange" onclick="getResult('=')">=</button>
+  </div>
+
+
+
+
+  <script>
+    let result = document.getElementById("result");
+function getResult(value){
+  if(value=== "="){
+    result.value = eval(result.value)
+  } else {
+result.value += value;
+  }
+}
+
+
+function clearResult(){
+  result.value ="";
+}
+  </script>
+</body>
+</html>
